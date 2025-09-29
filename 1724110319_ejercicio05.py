@@ -2,10 +2,10 @@ numMaterias = int(input("Escribe el número de materias: "))
 numAlumnos = int(input("Escribe el número de alumnos: "))
 
 totalGeneral = 0  # acumulador de todas las calificaciones
-alumnos = {}  # diccionario para guardar {nombre: [calificaciones]}
+alumnos = {}  # diccionario para guardarnombre
 
 for i in range(numAlumnos):
-    print(f"\n--- Alumno {i+1} ---")
+    print(f"\nAlumno {i+1}")
     nombreAlumno = input("Escribe el nombre del alumno: ")
     calificaciones = []
 
