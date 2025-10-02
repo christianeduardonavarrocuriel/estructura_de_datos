@@ -26,29 +26,28 @@ numMaterias = int(input("¿Cuántas materias serán? "))
 for i in range(numAlumnos):
     print(f"\nIngresa las calificaciones de {nombres[i]}:")
     for j in range(numMaterias):
-        cal = int(input(f"Calificación de la materia {j+1} (La escala es de 0 a 10): "))
+        cal = int(input(f"Calificación de la materia {j+1} (0 a 10): "))
         calificaciones[i].append(cal)
 
-print("\nCalificaciones de los alumnos")
+print("\n=== Calificaciones de los alumnos ===")
 for i in range(numAlumnos):
     print(f"{nombres[i]}: {calificaciones[i]}")
 
-print("\nPromedio de cada alumno")
+print("\n=== Promedio de cada alumno ===")
 for i in range(numAlumnos):
     sumaCalificaciones = sum(calificaciones[i])
     promedioAlumno = sumaCalificaciones / numMaterias
     print(f"{nombres[i]}: {promedioAlumno}")
 
 totalGeneral = 0
-
 for i in range(numAlumnos):
     totalGeneral += sum(calificaciones[i])
 
 promedioGeneral = totalGeneral / (numAlumnos * numMaterias)
-
 print(f"\nPromedio general del grupo: {promedioGeneral}")
 
-print("\nPromedio por materia")
+# Promedio por materia
+print("\n=== Promedio por materia ===")
 for j in range(numMaterias):
     sumaMateria = 0
     for i in range(numAlumnos):
@@ -56,10 +55,8 @@ for j in range(numMaterias):
     promedioMateria = sumaMateria / numAlumnos
     print(f"Materia {j+1}: {promedioMateria}")
 
-
 minima = 10
 maxima = 0
-
 for i in range(numAlumnos):
     for cal in calificaciones[i]:
         if cal < minima:
@@ -67,23 +64,33 @@ for i in range(numAlumnos):
         if cal > maxima:
             maxima = cal
 
-print("\nCalificación mínima y máxima")
+print("\n=== Calificación mínima y máxima ===")
 print(f"Calificación máxima: {maxima}")
 print(f"Calificación mínima: {minima}")
 
 aprobados = 0
 reprobados = 0
-
 for i in range(numAlumnos):
-    promedioAlumno = sum(calificaciones[i]) / numMaterias
-    if promedioAlumno >= 7:
+    aprobado = True
+    for cal in calificaciones[i]:
+        if cal < 7:
+            aprobado = False
+            break
+    if aprobado:
         aprobados += 1
     else:
         reprobados += 1
 
-print("\nResumen:")
-print(f"Alumnos aprobados: {aprobados}")
-print(f"Alumnos reprobados: {reprobados}")
+print("\n=== Aprobados y reprobados por materia ===")
+for j in range(numMaterias):
+    aprobados_materia = 0
+    reprobados_materia = 0
+    for i in range(numAlumnos):
+        if calificaciones[i][j] >= 7:
+            aprobados_materia += 1
+        else:
+            reprobados_materia += 1
+    print(f"Materia {j+1}: Aprobados {aprobados_materia}, Reprobados {reprobados_materia}")
 
 buscar = int(input("\nIngrese la calificación a buscar: "))
 
@@ -97,7 +104,7 @@ for i in range(numAlumnos):
         break
 
 if encontrado:
-    print(f"La calificación {buscar} si se encuentra")
+    print(f"La calificación {buscar} sí se encuentra")
 else:
     print(f"La calificación {buscar} no se encuentra")
 
@@ -108,5 +115,5 @@ for i in range(numAlumnos):
 
 todasCalificaciones.sort(reverse=True)
 
-print("\nCalificaciones ordenadas de mayor a menor")
+print("\n=== Calificaciones ordenadas de mayor a menor ===")
 print(todasCalificaciones)
