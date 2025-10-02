@@ -29,11 +29,11 @@ for i in range(numAlumnos):
         cal = int(input(f"Calificación de la materia {j+1} (0 a 10): "))
         calificaciones[i].append(cal)
 
-print("\n=== Calificaciones de los alumnos ===")
+print("\nCalificaciones de los alumnos")
 for i in range(numAlumnos):
     print(f"{nombres[i]}: {calificaciones[i]}")
 
-print("\n=== Promedio de cada alumno ===")
+print("\nPromedio de cada alumno")
 for i in range(numAlumnos):
     sumaCalificaciones = sum(calificaciones[i])
     promedioAlumno = sumaCalificaciones / numMaterias
@@ -47,7 +47,7 @@ promedioGeneral = totalGeneral / (numAlumnos * numMaterias)
 print(f"\nPromedio general del grupo: {promedioGeneral}")
 
 # Promedio por materia
-print("\n=== Promedio por materia ===")
+print("\nPromedio por materia")
 for j in range(numMaterias):
     sumaMateria = 0
     for i in range(numAlumnos):
@@ -64,7 +64,7 @@ for i in range(numAlumnos):
         if cal > maxima:
             maxima = cal
 
-print("\n=== Calificación mínima y máxima ===")
+print("\nCalificación mínima y máxima")
 print(f"Calificación máxima: {maxima}")
 print(f"Calificación mínima: {minima}")
 
@@ -81,7 +81,7 @@ for i in range(numAlumnos):
     else:
         reprobados += 1
 
-print("\n=== Aprobados y reprobados por materia ===")
+print("\nAprobados y reprobados por materia")
 for j in range(numMaterias):
     aprobados_materia = 0
     reprobados_materia = 0
@@ -115,5 +115,5 @@ for i in range(numAlumnos):
 
 todasCalificaciones.sort(reverse=True)
 
-print("\n=== Calificaciones ordenadas de mayor a menor ===")
+print("\nCalificaciones ordenadas de mayor a menor")
 print(todasCalificaciones)
