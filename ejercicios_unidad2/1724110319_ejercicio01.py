@@ -1,6 +1,6 @@
 nombre = []
  
-nombre = str(input("Escribe el nombre que deseas poner en Fila y en Pila: "))
+nombre = str(input("Escribe lo que deseas poner en Fila y en Pila: "))
 
 if len(nombre) == 1 or len(nombre) == 0:
     print("Lo siento, pero nombres que tengan solo 1 letra o ninguna no es valido")
