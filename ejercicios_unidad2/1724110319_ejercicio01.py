@@ -1,11 +1,13 @@
-nombre = []
- 
-nombre = str(input("Escribe lo que deseas poner en Fila y en Pila: "))
+nombre = input("Escribe una palabra: ")
 
-if len(nombre) == 1 or len(nombre) == 0:
-    print("Lo siento, pero nombres que tengan solo 1 letra o ninguna no es valido")
-
+if len(nombre) <= 1:
+    print("Lo siento, las palabras con 1 letra o ninguna no se pueden invertir")
 else:
-    print(f"Tu palabra en Fila es:",(nombre))
-    palabra_pila = nombre[::-1]
-    print(f"Tu palabra en Pila es:",(palabra_pila))
+    pila = list(nombre)
+
+    print("Tu palabra en Fila es:", nombre)
+
+    print("Tu palabra en Pila es: " , end = "")
+    while pila:
+        print(pila.pop(), end = "")
+    print()
