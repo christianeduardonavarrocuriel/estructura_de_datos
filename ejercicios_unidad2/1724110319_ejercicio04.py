@@ -5,9 +5,12 @@
 
 palabra = input("Escribe la cadena de palabras que deseas invertir: ")
 
-pila = list(palabra)
+if len(palabra) <= 1:
+    print("Error")
+else:
+    pila = list(palabra)
 
-print("Tu cadena de palabras invertida se ve asi: ", end = "")
-while pila:
-    print(pila.pop(), end = "")
-print()
+    print("Tu cadena de palabras invertida se ve asi: ", end = "")
+    while pila:
+        print(pila.pop(), end = "")
+    print()
