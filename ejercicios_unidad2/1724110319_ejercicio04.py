@@ -6,7 +6,7 @@
 palabra = input("Escribe la cadena de palabras que deseas invertir: ")
 
 if len(palabra) <= 1:
-    print("Error")
+    print("Lo siento, pero 1 letra o ninguna no puede invertirse")
 else:
     pila = list(palabra)
 
