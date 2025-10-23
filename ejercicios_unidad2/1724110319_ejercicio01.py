@@ -1,6 +1,6 @@
 nombre = input("Escribe una palabra: ")
 
-if len(nombre) <= 1:
+if len(nombre) <= 1 or " ":
     print("Lo siento, las palabras con 1 letra o ninguna no se pueden invertir")
 else:
     pila = list(nombre)
