@@ -5,7 +5,7 @@
 
 palabra = input("Escribe la palabra que deseas saber cuantos caracteres especiales tiene: ")
 
-caracteres_especiales = set(r'''  °|Ññ!¡"#$%&'()*+,-./:;<=>?@[\]^_`¨{|}~1234567890´ ''')
+caracteres_especiales = set(r'''  #$%&'()*+,°|Ññ!¡"-./:;<=>?@[\]^_`¨{|}~1234567890´ ''')
 
 pila = list(palabra)
 
