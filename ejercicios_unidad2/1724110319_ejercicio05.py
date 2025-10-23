@@ -5,8 +5,7 @@
 
 palabra = input("Escribe la palabra que deseas saber cuantos caracteres especiales tiene: ")
 
-caracteres_especiales = set('''  !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
-''')
+caracteres_especiales = set(r'''  °|Ññ!¡"#$%&'()*+,-./:;<=>?@[\]^_`¨{|}~1234567890´ ''')
 
 pila = list(palabra)
 
@@ -18,4 +17,4 @@ while pila:
     if caracter in caracteres_especiales or caracter == " ":
         contador += 1
 
-print(f"La cantidad de caracteres especiales son:",(contador))
+print(f"La cantidad de caracteres especiales son (incluyendo espacios):",(contador))
