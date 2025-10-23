@@ -8,13 +8,18 @@ palabra = input("Escribe la palabra que quieres saber si al invertir es palíndr
 
 palabra = palabra.lower().replace(" ", "")
 
-pila = list(palabra)
+if len(palabra) == 0:
+    print("Lo siento, pero no se puede hacer un palíndromo si no hay nada")
 
-invertida = ""
-while pila:
-    invertida += pila.pop()
+else: 
+    pila = list(palabra)
 
-if palabra == invertida:
-    print(f"Escribiste {palabra}, es un palíndromo.")
-else:
-    print(f"Escribiste {palabra}, no es un palíndromo.")
+    invertida = ""
+    while pila:
+        invertida += pila.pop()
+
+    if palabra == invertida:
+        print(f"Escribiste: {palabra}, es un palíndromo.")
+
+    else:
+        print(f"Escribiste: {palabra}, no es un palíndromo.")
