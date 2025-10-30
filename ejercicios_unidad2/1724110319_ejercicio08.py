@@ -15,6 +15,14 @@
 
 cola = []
 
+def mostrar_fila():
+    if cola:
+        print("\nFila actual:")
+        for i, cliente in enumerate(cola, start=1):
+            print(f"{i}. {cliente}")
+    else:
+        print("La fila está vacía.")
+
 while True:
     opcion = input(
         "¿Qué te gustaría hacer?\n"
@@ -29,6 +37,7 @@ while True:
         nombre = input("Ingrese el nombre del cliente: ")
         cola.append(nombre)
         print(f"{nombre} ha llegado y se ha unido a la fila.")
+        mostrar_fila()
 
     elif opcion == "b":
         if cola:
@@ -36,14 +45,10 @@ while True:
             print(f"{cliente} ha comprado un boleto y ha salido de la fila.")
         else:
             print("No hay clientes en la fila.")
+        mostrar_fila()
 
     elif opcion == "c":
-        if cola:
-            print("\nFila actual:")
-            for i, cliente in enumerate(cola, start=1):
-                print(f"{i}. {cliente}")
-        else:
-            print("La fila está vacía.")
+        mostrar_fila()
 
     elif opcion == "d":
         print("Gracias por usar el sistema. ¡Hasta pronto!")
