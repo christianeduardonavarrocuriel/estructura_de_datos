@@ -2,4 +2,4 @@
 # existen en esa linea de texto, el usuario podra elegir cualquier letra del alfabeto ya sea mayuscula o minuscula y el 
 # sistema entregara el numero de veces que esa letra aparece esa letra repetida, utilice una pila para el desarrollo
 
-palabra =
+palabra = input("Escribe el texto que deseas ")
