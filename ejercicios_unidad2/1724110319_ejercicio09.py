@@ -20,4 +20,4 @@ opcion = int(input("¿Qué quieres hacer?\n"
                    "4) Mostrar los documentos en oferta\n"
                    "5) Salir del Programa\n"))
 
-if opcion ==
+if opcion == 
